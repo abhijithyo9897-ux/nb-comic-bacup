@@ -98,6 +98,12 @@ const SettingsProfile = () => {
 
       {/* App Information & Policies */}
       <section className="settings-section links-section animate-fade-in" style={{ animationDelay: '0.3s' }}>
+        <Link to="/architecture" className="policy-link glass-panel">
+          <FileText size={20} /> Action Mode: Tech Stack Specs
+        </Link>
+        <Link to="/fundraising" className="policy-link glass-panel">
+          <FileText size={20} /> Global Fundraising Strategy
+        </Link>
         <Link to="/contributors" className="policy-link glass-panel">
           <FileText size={20} /> Contributor Remuneration Framework
         </Link>

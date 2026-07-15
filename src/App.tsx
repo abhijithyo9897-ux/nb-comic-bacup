@@ -15,6 +15,8 @@ import NewsHub from './pages/NewsHub';
 import SettingsProfile from './pages/SettingsProfile';
 import ContributorFramework from './pages/ContributorFramework';
 import TermsAndConditions from './pages/TermsAndConditions';
+import TechnicalArchitecture from './pages/TechnicalArchitecture';
+import FundraisingStrategy from './pages/FundraisingStrategy';
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated } = useAuth();
@@ -46,6 +48,8 @@ function AppRoutes() {
         {/* Policy Pages */}
         <Route path="/contributors" element={<ContributorFramework />} />
         <Route path="/terms" element={<TermsAndConditions />} />
+        <Route path="/architecture" element={<TechnicalArchitecture />} />
+        <Route path="/fundraising" element={<FundraisingStrategy />} />
       </Routes>
     </div>
   );
