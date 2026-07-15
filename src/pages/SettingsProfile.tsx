@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
-import { LogOut, Sliders, Moon, Sun, Clock, Mic, FileText } from 'lucide-react';
+import { LogOut, Sliders, Moon, Sun, Clock, Mic, FileText, Database } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 import './SettingsProfile.css';
@@ -98,6 +98,9 @@ const SettingsProfile = () => {
 
       {/* App Information & Policies */}
       <section className="settings-section links-section animate-fade-in" style={{ animationDelay: '0.3s' }}>
+        <Link to="/schema" className="policy-link glass-panel">
+          <Database size={20} /> PostgreSQL Schema Blueprint
+        </Link>
         <Link to="/architecture" className="policy-link glass-panel">
           <FileText size={20} /> Action Mode: Tech Stack Specs
         </Link>

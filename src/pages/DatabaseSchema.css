@@ -1,0 +1,45 @@
+.database-schema .table-container {
+  margin-top: 1.5rem;
+  overflow-x: auto;
+}
+
+.database-schema h4 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+.database-schema table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.database-schema th, .database-schema td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.database-schema th {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--accent-main);
+  font-weight: 600;
+}
+
+.database-schema tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.database-schema td:nth-child(2) {
+  font-family: monospace;
+  color: var(--success);
+}
+
+.database-schema td:nth-child(3) {
+  font-family: monospace;
+  color: var(--danger);
+  font-size: 0.8rem;
+}

@@ -17,6 +17,7 @@ import ContributorFramework from './pages/ContributorFramework';
 import TermsAndConditions from './pages/TermsAndConditions';
 import TechnicalArchitecture from './pages/TechnicalArchitecture';
 import FundraisingStrategy from './pages/FundraisingStrategy';
+import DatabaseSchema from './pages/DatabaseSchema';
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated } = useAuth();
@@ -50,6 +51,7 @@ function AppRoutes() {
         <Route path="/terms" element={<TermsAndConditions />} />
         <Route path="/architecture" element={<TechnicalArchitecture />} />
         <Route path="/fundraising" element={<FundraisingStrategy />} />
+        <Route path="/schema" element={<DatabaseSchema />} />
       </Routes>
     </div>
   );
