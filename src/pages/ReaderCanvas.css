@@ -1,0 +1,183 @@
+.reader-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.comic-panel {
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Action Mode Kinematic Animation */
+@keyframes kinematicPan {
+  0% { transform: scale(1) translateX(0); }
+  50% { transform: scale(1.05) translateX(-2%); }
+  100% { transform: scale(1) translateX(0); }
+}
+.kinematic-anim {
+  animation: kinematicPan 10s infinite ease-in-out;
+}
+
+.tap-zone {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 30%;
+  z-index: 10;
+}
+.tap-zone.left { left: 0; }
+.tap-zone.right { right: 0; }
+
+.reader-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: transparent;
+  border: none;
+  backdrop-filter: none;
+}
+
+.top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: auto;
+  color: white;
+}
+
+.mode-indicator {
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-main);
+}
+
+.settings-panel {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 300px;
+  padding: 1.5rem;
+  pointer-events: auto;
+  background: rgba(10, 10, 10, 0.95);
+  border-color: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.settings-panel h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.mode-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.mode-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.mode-btn.active {
+  background: var(--accent-main);
+  color: black;
+  border-color: var(--accent-main);
+}
+
+.sub-settings {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.sub-settings p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.5rem 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  pointer-events: auto;
+  color: white;
+}
+
+.progress-rail {
+  flex: 1;
+  height: 4px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent-main);
+  transition: width 0.3s ease;
+}
+
+.pacing-status {
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-width: 60px;
+  text-align: right;
+}
+
+.subtitles-overlay {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.7);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+  pointer-events: none;
+  border: 1px solid rgba(255,255,255,0.1);
+}

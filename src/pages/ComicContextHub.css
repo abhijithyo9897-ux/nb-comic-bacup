@@ -1,0 +1,136 @@
+.comic-context-hub {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+.hero-asset-frame {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+}
+
+.hero-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.hero-controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.hero-controls .btn-icon {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, var(--bg-primary) 0%, transparent 100%);
+}
+
+.context-content {
+  padding: 0 1.5rem;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 5;
+}
+
+.attribution-hierarchy h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+.issue-num {
+  color: var(--accent-main);
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.creators {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+.creators span {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.metadata-ribbon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.meta-item {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.meta-item.rating {
+  background: var(--accent-main);
+  color: var(--bg-primary);
+}
+
+.synopsis-panel {
+  max-height: 150px;
+  overflow-y: auto;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+.primary-action-interface {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 600px;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+  z-index: 1000;
+}
+
+.wishlist-btn {
+  border: 1px solid var(--border-color);
+  padding: 0.75rem;
+}
+
+.wishlist-btn:hover {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.read-now-btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
